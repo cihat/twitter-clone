@@ -1,5 +1,7 @@
 <script>
-export default {};
+export default {
+  name: "SideBarLeft",
+};
 </script>
 
 <template>
@@ -7,42 +9,42 @@ export default {};
     <ul>
       <li>
         <router-link to="/" tag="a"
-          ><img src="../assets/img/TwitterLogo.svg" alt="logo"
+          ><img src="../../assets/img/TwitterLogo.svg" alt="logo"
         /></router-link>
       </li>
       <li>
         <router-link to="/home" tag="a">
-          <img src="../assets/img/Home.svg" alt="home" />
+          <img src="../../assets/img/Home.svg" alt="home" />
           <h4>Home</h4>
         </router-link>
       </li>
       <li>
         <router-link to="/explore" tag="a">
-          <img src="../assets/img/explore.svg" alt="explore" />
+          <img src="../../assets/img/explore.svg" alt="explore" />
           <h4>Explore</h4>
         </router-link>
       </li>
       <li>
         <router-link to="/notifications" tag="a">
-          <img src="../assets/img/notifications.svg" alt="notifications" />
+          <img src="../../assets/img/notifications.svg" alt="notifications" />
           <h4>Notifications</h4>
         </router-link>
       </li>
       <li>
         <router-link to="/messages" tag="a">
-          <img src="../assets/img/messages.svg" alt="messages" />
+          <img src="../../assets/img/messages.svg" alt="messages" />
           <h4>Messages</h4>
         </router-link>
       </li>
       <li>
         <router-link to="/bookmarks" tag="a">
-          <img src="../assets/img/bookmarks.svg" alt="bookmarks" />
+          <img src="../../assets/img/bookmarks.svg" alt="bookmarks" />
           <h4>Bookmarks</h4>
         </router-link>
       </li>
       <li>
         <router-link to="/lists" tag="a">
-          <img src="../assets/img/lists.svg" alt="lists" />
+          <img src="../../assets/img/lists.svg" alt="lists" />
           <h4>Lists</h4>
         </router-link>
       </li>
@@ -63,7 +65,7 @@ export default {};
       </li>
       <li>
         <router-link to="/More" tag="a">
-          <img src="../assets/img/more.svg" alt="more" />
+          <img src="../../assets/img/more.svg" alt="more" />
           <h4>More</h4>
         </router-link>
       </li>
@@ -82,7 +84,7 @@ export default {};
   display: flex;
   width: 285px;
   height: 1922px;
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  // border-right: 1px solid rgba(0, 0, 0, 0.08);
   ul {
     align-content: center;
     padding: auto;

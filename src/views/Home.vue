@@ -12,25 +12,28 @@ export default {
 </script>
 
 <template>
-  <div id="home">
+  <div id="home-page" class="home">
     <div class="title">
       <h3>Home</h3>
       <img src="../assets/img/starsicon.png" alt="" class="icon" />
     </div>
     <ZoneTweet />
     <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
   </div>
 </template>
 
 <style scoped lang="scss">
-#home {
+.home {
   border: 1px solid rgba(0, 0, 0, 0.08);
 
   .title {
     display: flex;
     justify-content: space-between;
     margin-bottom: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
     padding: 1rem;
     h3 {
       font-weight: 900;
