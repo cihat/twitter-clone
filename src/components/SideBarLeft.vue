@@ -23,9 +23,9 @@ export default {};
         </router-link>
       </li>
       <li>
-        <router-link to="/notifitions" tag="a">
+        <router-link to="/notifications" tag="a">
           <img src="../assets/img/notifications.svg" alt="notifications" />
-          <h4>Notification</h4>
+          <h4>Notifications</h4>
         </router-link>
       </li>
       <li>
@@ -82,13 +82,12 @@ export default {};
   display: flex;
   width: 285px;
   height: 1922px;
-  box-shadow: inset -1px 0px 0px rgba(0, 0, 0, 0.08),
-    inset 1px 0px 0px rgba(0, 0, 0, 0.08);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
   ul {
     align-content: center;
     padding: auto;
-    margin-top: 32px;
-    padding-left: 80px;
+    // margin-top: 32px;
+    // padding-left: 80px;
 
     li {
       &:nth-child(1) {
@@ -97,8 +96,10 @@ export default {};
       margin: 20px;
       a {
         display: flex;
+        text-align: center;
         align-items: center;
         justify-content: flex-start;
+        border-radius: 100px;
         svg {
           width: 21px;
           margin-right: 20px;
@@ -107,13 +108,16 @@ export default {};
           margin-right: 20px;
         }
         h4 {
-          font-weight: 700;
-          font-size: 19px;
+          font-weight: 800;
+          font-size: 20px;
           line-height: 22.27px;
           color: #333333;
+          padding: 0.5rem;
         }
       }
       a:hover {
+        background-color: rgba(#1da1f2, 0.08);
+
         h4 {
           color: #1da1f2;
         }
@@ -124,10 +128,10 @@ export default {};
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        width: 42px;
+        width: 232px;
+        height: 48px;
         padding: 16px 69px;
         border-radius: 100px;
-        height: 18px;
         font-weight: 700;
         font-size: 15px;
         line-height: 17.58px;

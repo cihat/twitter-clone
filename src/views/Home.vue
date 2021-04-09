@@ -1,9 +1,12 @@
 <script>
 import ZoneTweet from "../components/ZoneTweet";
+import Tweet from "../components/Tweet";
+
 export default {
   name: "Home",
   components: {
     ZoneTweet,
+    Tweet,
   },
 };
 </script>
@@ -15,24 +18,23 @@ export default {
       <img src="../assets/img/starsicon.png" alt="" class="icon" />
     </div>
     <ZoneTweet />
+    <Tweet />
   </div>
 </template>
 
 <style scoped lang="scss">
 #home {
-  margin-top: 54px;
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-bottom: 10px;
-  width: 692px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 
   .title {
     display: flex;
     justify-content: space-between;
     margin-bottom: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 1rem;
     h3 {
       font-weight: 900;
-      font-size: 19px;
+      font-size: 23px;
       line-height: 22.27px;
       color: #000;
       cursor: pointer;

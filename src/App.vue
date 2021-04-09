@@ -1,9 +1,14 @@
 <script>
 import SideBarLeft from "./components/SideBarLeft";
+import SideBarRight from "./components/SideBarRight";
+import WhoFollow from "./components/WhoFollow";
+
 export default {
   name: "App",
   components: {
     SideBarLeft,
+    SideBarRight,
+    WhoFollow,
   },
 };
 </script>
@@ -11,8 +16,11 @@ export default {
 <template>
   <div id="app">
     <SideBarLeft />
-    <router-view />
-    <SideBarLeft />
+    <router-view id="router-view" />
+    <div class="right">
+      <SideBarRight />
+      <WhoFollow />
+    </div>
   </div>
 </template>
 
@@ -28,5 +36,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   margin: auto;
+  #router-view {
+    width: 692px;
+  }
 }
 </style>

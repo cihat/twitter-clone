@@ -3,13 +3,3 @@ module.exports = {
     ? '/twitter-clone/'
     : '/',
 };
-
-// css: {
-//     loaderOptions: {
-//       sass: {
-//           prependData: `
-//           @import "@/assets/scss/responsive.scss";
-//           `
-//       }
-//     }
-//   }
