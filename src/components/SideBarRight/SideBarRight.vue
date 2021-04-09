@@ -13,27 +13,11 @@ export default {
     SearchTrend,
     WhoFollow,
   },
-  methods: {
-    onResize() {
-      if (window.innerWidth < 699) {
-        this.display = false;
-      } else {
-        this.display = true;
-      }
-    },
-  },
-  created() {
-    window.addEventListener("resize", this.onResize);
-  },
-
-  beforeDestroy() {
-    window.removeEventListener("resize", this.onResize);
-  },
 };
 </script>
 
 <template>
-  <div id="sidebar-right">
+  <div id="sidebar-right" class="dneme">
     <SearchTrend id="search-trend" />
     <WhoFollow id="who-follow" />
   </div>
@@ -41,6 +25,24 @@ export default {
 
 <style scoped lang="scss">
 #sidebar-right {
-  min-width: 350px;
+  max-width: 350px;
+  @media (max-width: 758px) {
+    html {
+      font-size: 12px;
+    }
+    #sidebar-right {
+      width: 0px;
+      display: none !important;
+      background-color: red;
+    }
+    #search-trend {
+      display: none !important;
+      width: 0px;
+    }
+    #who-follow {
+      display: none !important;
+      width: 0px;
+    }
+  }
 }
 </style>

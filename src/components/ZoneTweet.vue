@@ -59,6 +59,7 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      align-items: flex-start;
       /* .left-icon {
       } */
 

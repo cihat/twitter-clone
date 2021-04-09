@@ -17,7 +17,7 @@ export default {};
         <div class="content">
           <p class="rank">1.Trending</p>
           <h4 class="caption">#istanbulsozlesmesiyasatir</h4>
-          <p class="tweet-number">456K Tweets</p>
+          <p class="tweet-number">82M Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
       </div>
@@ -25,7 +25,7 @@ export default {};
         <div class="content">
           <p class="rank">2.Trending</p>
           <h4 class="caption">#ırkcılık</h4>
-          <p class="tweet-number">456K Tweets</p>
+          <p class="tweet-number">40M Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
       </div>
@@ -33,15 +33,15 @@ export default {};
         <div class="content">
           <p class="rank">3.Trending</p>
           <h4 class="caption">#adalet</h4>
-          <p class="tweet-number">456K Tweets</p>
+          <p class="tweet-number">70M Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
       </div>
       <div class="trend">
         <div class="content">
           <p class="rank">4.Trending</p>
-          <h4 class="caption">#hukuk</h4>
-          <p class="tweet-number">456K Tweets</p>
+          <h4 class="caption">#128milyardolarnerede</h4>
+          <p class="tweet-number">40M Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
       </div>
@@ -49,7 +49,7 @@ export default {};
         <div class="content">
           <p class="rank">5.Trending</p>
           <h4 class="caption">#ekonomi</h4>
-          <p class="tweet-number">456K Tweets</p>
+          <p class="tweet-number">100M Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
       </div>
@@ -57,7 +57,7 @@ export default {};
         <div class="content">
           <p class="rank">6.Trending</p>
           <h4 class="caption">#egitim</h4>
-          <p class="tweet-number">456K Tweets</p>
+          <p class="tweet-number">46M Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
       </div>
