@@ -1,12 +1,14 @@
+<script>
+export default {};
+</script>
 <template>
-  <div>
+  <div class="bookmarks">
     <h1>This is an bookmarks page</h1>
   </div>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style scoped lang="scss">
+.bookmarks {
+  width: 598px;
+}
 </style>

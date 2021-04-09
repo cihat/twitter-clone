@@ -31,10 +31,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   margin: auto;
-
-  #router-view {
-    max-width: 597.5px;
-    min-width: 597.5px;
-  }
 }
 </style>

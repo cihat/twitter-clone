@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="messages">
     <h1>This is an messages page</h1>
   </div>
 </template>
@@ -9,4 +9,7 @@ export default {};
 </script>
 
 <style scoped lang="scss">
+.messages {
+  width: 598px;
+}
 </style>

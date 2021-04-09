@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>This is an lists page</h1>
+  <div class="explore">
+    <h1>This is an explore page</h1>
   </div>
 </template>
 
@@ -9,4 +9,7 @@ export default {};
 </script>
 
 <style scoped lang="scss">
+.explore {
+  width: 598px;
+}
 </style>

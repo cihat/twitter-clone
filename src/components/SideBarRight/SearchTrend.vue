@@ -10,13 +10,13 @@ export default {};
     </div>
     <div class="trends">
       <div class="title">
-        <h2>Trends For you</h2>
+        <h2>Trends for you</h2>
         <img src="../../assets/tweet-icons/settings-icon.svg" alt="" />
       </div>
       <div class="trend">
         <div class="content">
           <p class="rank">1.Trending</p>
-          <h4 class="caption">#JessieMueller</h4>
+          <h4 class="caption">#istanbulsozlesmesiyasatir</h4>
           <p class="tweet-number">456K Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
@@ -24,7 +24,7 @@ export default {};
       <div class="trend">
         <div class="content">
           <p class="rank">2.Trending</p>
-          <h4 class="caption">#JessieMueller</h4>
+          <h4 class="caption">#ırkcılık</h4>
           <p class="tweet-number">456K Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
@@ -32,7 +32,7 @@ export default {};
       <div class="trend">
         <div class="content">
           <p class="rank">3.Trending</p>
-          <h4 class="caption">#JessieMueller</h4>
+          <h4 class="caption">#adalet</h4>
           <p class="tweet-number">456K Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
@@ -40,7 +40,7 @@ export default {};
       <div class="trend">
         <div class="content">
           <p class="rank">4.Trending</p>
-          <h4 class="caption">#JessieMueller</h4>
+          <h4 class="caption">#hukuk</h4>
           <p class="tweet-number">456K Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
@@ -48,7 +48,7 @@ export default {};
       <div class="trend">
         <div class="content">
           <p class="rank">5.Trending</p>
-          <h4 class="caption">#JessieMueller</h4>
+          <h4 class="caption">#ekonomi</h4>
           <p class="tweet-number">456K Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
@@ -56,7 +56,7 @@ export default {};
       <div class="trend">
         <div class="content">
           <p class="rank">6.Trending</p>
-          <h4 class="caption">#JessieMueller</h4>
+          <h4 class="caption">#egitim</h4>
           <p class="tweet-number">456K Tweets</p>
         </div>
         <img src="../../assets/tweet-icons/icon-section.svg" alt="" />
@@ -68,8 +68,8 @@ export default {};
 
 <style scoped lang="scss">
 #search-trend {
-  min-width: 350px;
-  margin-top: 0.5rem;
+  max-width: 350px;
+  margin-top: 0.2rem;
   margin-bottom: 24px;
   margin-left: 25px;
   display: flex;
@@ -130,6 +130,7 @@ export default {};
       .content {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         * {
           margin-bottom: 4px;
         }

@@ -28,6 +28,7 @@ export default {
 
 <style scoped lang="scss">
 .home {
+  max-width: 598px;
   border: 1px solid rgba(0, 0, 0, 0.08);
 
   .title {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="more">
     <h1>This is an more page</h1>
   </div>
 </template>
@@ -9,4 +9,7 @@ export default {};
 </script>
 
 <style scoped lang="scss">
+.more {
+  min-width: 598px;
+}
 </style>

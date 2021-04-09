@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <di class="profile">
     <h1>This is an profile page</h1>
-  </div>
+  </di>
 </template>
 
 <script>
@@ -9,4 +9,7 @@ export default {};
 </script>
 
 <style scoped lang="scss">
+.profile {
+  min-width: 598px;
+}
 </style>

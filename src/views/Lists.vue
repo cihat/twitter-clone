@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>This is an notifications page</h1>
+  <div class="lists">
+    <h1>This is an lists page</h1>
   </div>
 </template>
 
@@ -9,4 +9,7 @@ export default {};
 </script>
 
 <style scoped lang="scss">
+.lists {
+  width: 598px;
+}
 </style>
