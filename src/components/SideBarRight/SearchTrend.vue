@@ -97,6 +97,13 @@ export default {};
       line-height: 27.58px;
       width: 15rem;
     }
+    input:active {
+      outline: none;
+      border: none;
+    }
+    input:focus {
+      outline: 0;
+    }
   }
 
   .trends {

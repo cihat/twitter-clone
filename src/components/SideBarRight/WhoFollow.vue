@@ -142,6 +142,7 @@ export default {
     }
 
     button {
+      cursor: pointer;
       color: #1da1f2;
       background-color: inherit;
       line-height: 18px;
@@ -158,7 +159,16 @@ export default {
       border: 1px solid #fff;
       background-color: #1da1f2;
       color: #fff;
-      transition: 1s color;
+      border: 1px solid #fff;
+
+      transition: 1s color, 1s background-color, 1s border;
+    }
+    button:active {
+      outline: none;
+      border: none;
+    }
+    button:focus {
+      outline: 0;
     }
   }
 }

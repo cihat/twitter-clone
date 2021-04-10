@@ -225,9 +225,22 @@ export default {
         line-height: 17.58px;
         color: #fff;
         background-color: #1da1f2;
+        transition: 1s color, 1s background-color;
         svg {
           display: none;
         }
+      }
+      button:hover {
+        color: #1da1f2;
+        background-color: #fff;
+        border: 1px solid #1da1f2;
+      }
+      button:active {
+        outline: none;
+        border: none;
+      }
+      button:focus {
+        outline: 0;
       }
 
       .hidden {
