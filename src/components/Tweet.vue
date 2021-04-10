@@ -14,14 +14,18 @@ export default {
         pictureUrl: null,
         userId: null,
       },
+      tweetBody: {
+        content: "",
+        author: "",
+      },
     };
   },
   methods: {
     addLike() {
       this.likeNumber += 1;
     },
-    randomUser() {
-      axios
+    async randomUser() {
+      await axios
         .get("https://randomuser.me/api/")
         .then((response) => {
           // handle success
@@ -40,6 +44,13 @@ export default {
           // console.log(this.userData);
         });
     },
+    async getQuote() {
+      await axios.get("https://api.quotable.io/random/").then((response) => {
+        const data = response.data;
+        this.tweetBody.content = data.content;
+        this.tweetBody.author = data.author;
+      });
+    },
   },
   async created() {
     let number = Math.floor(Math.random() * 100);
@@ -48,13 +59,13 @@ export default {
     this.replyNumber = number;
     this.likeNumber = Math.floor(number + (number2 / 6) ** 2);
     await this.randomUser();
+    await this.getQuote();
   },
 };
 </script>
 
 <template>
   <div id="tweet">
-    <!-- <img src="../assets/img/AvatarProfilePic.png" alt="" class="avatar-image" /> -->
     <img :src="userData.pictureUrl" />
     <!-- https://100k-faces.glitch.me/random-image" class="avatar-image -->
     <div class="tweet-content">
@@ -66,10 +77,8 @@ export default {
       </div>
       <div class="tweet-body">
         <p>
-          This is a tweet. It can be long, or short. Depends on what you have to
-          say. It can have some hashtags too. #likeNumberthis This is a tweet.
-          It can be long, or short. Depends on what you have to say. It can have
-          some hashtags too. <span class="hashtag">#likethis</span>
+          {{ tweetBody.content
+          }}<span class="hashtag">#{{ tweetBody.author }}</span>
         </p>
       </div>
       <div class="buttons">
