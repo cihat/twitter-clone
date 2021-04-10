@@ -8,6 +8,7 @@ export default {
       likeNumber: null,
       reTweetNumber: null,
       replyNumber: null,
+      date: null,
       userData: {
         firstName: null,
         lastName: null,
@@ -51,15 +52,22 @@ export default {
         this.tweetBody.author = data.author;
       });
     },
+
+    setRandomValue() {
+      let number = Math.floor(Math.random() * 100);
+      let number2 = Math.floor(Math.random() * 56);
+      this.reTweetNumber = Math.floor(number + (number2 / 4) ** 2);
+      this.likeNumber = Math.floor(number + (number2 / 6) ** 2);
+      this.date = Math.floor(Math.random() * 24) + 1;
+      this.replyNumber = number;
+    },
+  },
+  async mounted() {
+    await this.randomUser();
   },
   async created() {
-    let number = Math.floor(Math.random() * 100);
-    let number2 = Math.floor(Math.random() * 56);
-    this.reTweetNumber = Math.floor(number + (number2 / 4) ** 2);
-    this.replyNumber = number;
-    this.likeNumber = Math.floor(number + (number2 / 6) ** 2);
-    await this.randomUser();
     await this.getQuote();
+    this.setRandomValue();
   },
 };
 </script>
@@ -73,7 +81,7 @@ export default {
         <p class="name">{{ userData.firstName + " " + userData.lastName }}</p>
         <p class="username" v-show="userData.userId">@{{ userData.userId }}</p>
         <span>•</span>
-        <p class="date">14s</p>
+        <p class="date">{{ date }}h</p>
       </div>
       <div class="tweet-body">
         <p>

@@ -27,6 +27,14 @@ export default {
     <Tweet />
     <Tweet />
     <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
   </div>
 </template>
 
