@@ -6,7 +6,7 @@ export default {
 
 <template >
   <div id="zone-tweet">
-    <img src="../assets/img/AvatarProfilePic.png" alt="" class="avatar-image" />
+    <img src="https://100k-faces.glitch.me/random-image" class="avatar-image" />
     <div class="input-context">
       <input type="text" placeholder="What's happening" />
       <div class="icons">
@@ -32,14 +32,20 @@ export default {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
-  padding-left: 31px;
-  padding-top: 12px;
-  padding-bottom: 22px;
+  padding-left: 1rem;
+  padding-top: 8px;
+  // padding-bottom: 22px;
 
   display: flex;
   align-items: flex-start;
   img {
     margin-right: 1rem;
+  }
+  img.avatar-image {
+    margin-right: 1rem;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
   }
   .input-context {
     margin-right: 2rem;

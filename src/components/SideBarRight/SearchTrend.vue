@@ -95,6 +95,7 @@ export default {};
       background: #e7ecf0;
       font-size: 15px;
       line-height: 27.58px;
+      width: 15rem;
     }
   }
 

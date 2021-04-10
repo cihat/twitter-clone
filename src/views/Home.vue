@@ -23,6 +23,10 @@ export default {
     <Tweet />
     <Tweet />
     <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
+    <Tweet />
   </div>
 </template>
 
@@ -34,7 +38,6 @@ export default {
   .title {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 12px;
     padding: 1rem;
     h3 {
       font-weight: 900;

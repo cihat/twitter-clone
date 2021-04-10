@@ -1,6 +1,38 @@
 <script>
+const axios = require("axios");
+
 export default {
   name: "WhoFollow",
+  data() {
+    return {
+      userData: {
+        firstName: null,
+        lastName: null,
+        pictureUrl: null,
+        userId: null,
+      },
+    };
+  },
+  created() {
+    axios
+      .get("https://randomuser.me/api/")
+      .then((response) => {
+        // handle success
+        const value = [...response.data.results][0];
+        // console.log(value);
+        this.userData.firstName = value.name.first;
+        this.userData.lastName = value.name.last;
+        this.userData.pictureUrl = value.picture.medium;
+        this.userData.userId = value.id.name;
+      })
+      .catch((error) => {
+        // handle error
+        console.log(error);
+      })
+      .then(() => {
+        // console.log(this.userData);
+      });
+  },
 };
 </script>
 
@@ -9,7 +41,25 @@ export default {
     <h1>Who to follow</h1>
     <div class="people">
       <div class="container">
-        <img src="../../assets/profile-pics/ProfilePic.png" alt="" />
+        <img :src="userData.pictureUrl" alt="" />
+        <div class="name">
+          <h3 class="name">
+            {{ userData.firstName + " " + userData.lastName }}
+          </h3>
+          <h4 class="username" v-show="userData.userId">
+            @{{ userData.userId }}
+          </h4>
+        </div>
+      </div>
+      <button>Follow</button>
+    </div>
+    <div class="people">
+      <div class="container">
+        <img
+          src="https://100k-faces.glitch.me/random-image"
+          class="avatar-image"
+          alt=""
+        />
         <div class="name">
           <h3>McFly</h3>
           <h4>@levraimcfly</h4>
@@ -19,20 +69,14 @@ export default {
     </div>
     <div class="people">
       <div class="container">
-        <img src="../../assets/profile-pics/ProfilePic.png" alt="" />
+        <img :src="userData.pictureUrl" alt="" />
         <div class="name">
-          <h3>McFly</h3>
-          <h4>@levraimcfly</h4>
-        </div>
-      </div>
-      <button>Follow</button>
-    </div>
-    <div class="people">
-      <div class="container">
-        <img src="../../assets/profile-pics/ProfilePic.png" alt="" />
-        <div class="name">
-          <h3>McFly</h3>
-          <h4>@levraimcfly</h4>
+          <h3 class="name">
+            {{ userData.firstName + " " + userData.lastName }}
+          </h3>
+          <h4 class="username" v-show="userData.userId">
+            @{{ userData.userId }}
+          </h4>
         </div>
       </div>
       <button>Follow</button>
@@ -75,8 +119,12 @@ export default {
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      margin-right: 2rem;
       img {
         margin-right: 8px;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
       }
       div.name {
         h3 {
