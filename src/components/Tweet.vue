@@ -82,7 +82,7 @@ export default {
         </p>
       </div>
       <div class="buttons">
-        <div class="button">
+        <div class="button" id="reply">
           <svg class="reply" viewBox="0 0 24 24">
             <g>
               <path
@@ -92,7 +92,7 @@ export default {
           </svg>
           <span v-show="replyNumber">{{ replyNumber }}</span>
         </div>
-        <div class="button">
+        <div class="button" id="retweet">
           <svg class="retweet" viewBox="0 0 24 24">
             <g>
               <path
@@ -102,7 +102,7 @@ export default {
           </svg>
           <span v-show="reTweetNumber">{{ reTweetNumber }}</span>
         </div>
-        <div class="button">
+        <div class="button" id="like">
           <svg class="like" viewBox="0 0 24 24" v-on:click="addLike">
             <g>
               <path
@@ -112,7 +112,7 @@ export default {
           </svg>
           <span v-show="likeNumber">{{ likeNumber }}</span>
         </div>
-        <div class="button">
+        <div class="button" id="share">
           <svg class="share" viewBox="0 0 24 24">
             <g>
               <path
@@ -135,82 +135,97 @@ export default {
   padding: 1rem 31px 11px;
   cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-
   img {
     margin-right: 1rem;
     border-radius: 50%;
     width: 48px;
     height: 48px;
   }
-  .user-info {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 11px;
-    * {
-      margin-right: 4px;
-      line-height: 17.58px;
-      font-size: 15px;
-      color: #828282;
-    }
-    .name {
-      font-weight: 700;
-      color: #000;
-    }
-    span {
-      color: #828282;
-    }
-  }
-
-  .tweet-body {
-    margin-bottom: 11px;
-    p {
-      font-size: 15px;
-      line-height: 22px;
-      color: #333333;
-    }
-    .hashtag {
-      color: #1da1f2;
-    }
-    .hashtag:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .buttons {
-    display: flex;
-    justify-content: space-around;
-    .button {
+  .tweet-content {
+    width: 100%;
+    .user-info {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      svg {
-        cursor: pointer;
-        width: 24.75px;
-        padding: 5px;
+      align-items: flex-start;
+      margin-bottom: 11px;
+      * {
         margin-right: 4px;
+        line-height: 17.58px;
+        font-size: 15px;
+        color: #828282;
+      }
+      .name {
+        font-weight: 700;
+        color: #000;
       }
       span {
-        font-size: 12px;
+        color: #828282;
       }
-      .reply:hover {
+    }
+
+    .tweet-body {
+      margin-bottom: 11px;
+      p {
+        font-size: 15px;
+        line-height: 22px;
+        color: #333333;
+      }
+      .hashtag {
+        color: #1da1f2;
+      }
+      .hashtag:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      #reply:hover {
         fill: rgba(#1da1f2, 0.8);
         background-color: rgba(#1da1f2, 0.08);
-        border-radius: 50%;
+        border-radius: 100px;
+        span {
+          color: rgba(#1da1f2, 0.8);
+        }
       }
-      .retweet:hover {
+      #retweet:hover {
         fill: rgba(green, 0.8);
         background-color: rgba(green, 0.08);
-        border-radius: 50%;
+        border-radius: 100px;
+        span {
+          color: rgba(green, 0.8);
+        }
       }
-      .like:hover {
+      #like:hover {
         fill: rgba(red, 0.8);
         background-color: rgba(red, 0.08);
-        border-radius: 50%;
+        border-radius: 100px;
+        span {
+          color: rgba(red, 0.8);
+        }
       }
-      .share:hover {
+      #share:hover {
         fill: rgba(green, 0.8);
         background-color: rgba(green, 0.08);
         border-radius: 50%;
+        span {
+          color: rgba(green, 0.8);
+        }
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          cursor: pointer;
+          width: 24.75px;
+          padding: 5px;
+          margin-right: 4px;
+        }
+        span {
+          font-size: 12px;
+        }
       }
     }
   }
