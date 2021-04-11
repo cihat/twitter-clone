@@ -62,11 +62,9 @@ export default {
       this.replyNumber = number;
     },
   },
-  async mounted() {
-    await this.randomUser();
-  },
   async created() {
     await this.getQuote();
+    await this.randomUser();
     this.setRandomValue();
   },
 };
