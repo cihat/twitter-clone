@@ -19,6 +19,7 @@ export default {
         content: "",
         author: "",
       },
+      isVideoMode: false,
     };
   },
   methods: {
@@ -66,12 +67,16 @@ export default {
     await this.getQuote();
     await this.randomUser();
     this.setRandomValue();
+
+    setTimeout(() => {
+      this.isVideoMode = true;
+    }, 1000);
   },
 };
 </script>
 
 <template>
-  <div id="tweet">
+  <div id="tweet" v-show="isVideoMode">
     <img :src="userData.pictureUrl" />
     <!-- https://100k-faces.glitch.me/random-image" class="avatar-image -->
     <div class="tweet-content">

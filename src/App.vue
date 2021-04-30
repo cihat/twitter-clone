@@ -8,13 +8,19 @@ export default {
     SideBarLeft,
     SideBarRight,
   },
+  data() {
+    return {
+      isVideoMode: false,
+    };
+  },
+
 };
 </script>
 
 <template>
   <div id="app">
     <SideBarLeft />
-    <router-view id="router-view" />
+    <router-view id="router-view"/>
     <SideBarRight />
   </div>
 </template>
@@ -31,5 +37,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   margin: auto;
+}
+
+#router-view {
+  flex: auto;
+  max-width: 600px;
+  // flex-grow: 40;
 }
 </style>

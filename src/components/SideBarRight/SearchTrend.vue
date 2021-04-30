@@ -112,6 +112,8 @@ export default {};
     border-radius: 12px;
     background: #f6f8fa;
     padding: 14px 20px 12px;
+    position: sticky;
+    top: 15px;
 
     .title {
       display: flex;

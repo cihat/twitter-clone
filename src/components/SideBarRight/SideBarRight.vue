@@ -25,6 +25,7 @@ export default {
 
 <style scoped lang="scss">
 #sidebar-right {
+  display: block;
   max-width: 350px;
   @media (max-width: 758px) {
     html {

@@ -86,6 +86,8 @@ export default {
 
 <style scoped lang="scss">
 #who-follow {
+  position: sticky;
+  top: 1rem;
   max-width: 350px;
   margin-top: 0.2rem;
   margin-bottom: 24px;

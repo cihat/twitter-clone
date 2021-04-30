@@ -166,12 +166,13 @@ export default {
 #sidebar-left {
   top: 0;
   left: 0;
-  display: flex;
   max-width: 251px;
   ul {
     align-content: center;
     padding: auto;
     margin-right: 3rem;
+    position: sticky;
+    top: 15px;
 
     li {
       &:nth-child(1) {

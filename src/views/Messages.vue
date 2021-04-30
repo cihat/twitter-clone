@@ -11,5 +11,6 @@ export default {};
 <style scoped lang="scss">
 .messages {
   width: 598px;
+  margin-top: 1rem;
 }
 </style>
