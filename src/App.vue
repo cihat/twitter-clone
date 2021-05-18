@@ -1,6 +1,6 @@
 <script>
-import SideBarLeft from "./components/SideBarLeft/SideBarLeft";
-import SideBarRight from "./components/SideBarRight/SideBarRight";
+import SideBarLeft from "./components/SideBarLeft";
+import SideBarRight from "./components/SideBarRight";
 
 export default {
   name: "App",
@@ -30,14 +30,25 @@ export default {
 @import "./assets/scss/responsive.scss";
 @import "./assets/scss/global-variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import './assets/theme/colors.scss';
 
-#app {
-  font-family: "Roboto", sans-serif;
+body {
+  background-color: $color-bg;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  margin: auto;
 }
+
+#app {
+  // grid-template-columns: 275px 598px 350px;
+  // display: grid;
+  // grid-gap: 10px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 #router-view {
   flex: auto;

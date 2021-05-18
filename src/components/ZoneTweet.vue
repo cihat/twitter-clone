@@ -1,7 +1,8 @@
 <script>
 export default {
-  name: "ZoneTweet",
-};
+  name: 'ZoneTweet',
+  components: {}
+}
 </script>
 
 <template >
@@ -11,6 +12,7 @@ export default {
       <input type="text" placeholder="What's happening" />
       <div class="icons">
         <div class="left-icon">
+          <!-- <base-icon icon="image"></base-icon> -->
           <img src="../assets/img/Image.svg" alt="" />
           <img src="../assets/img/Gif.svg" alt="" />
           <img src="../assets/img/Stats.svg" alt="" />
@@ -59,6 +61,9 @@ export default {
 #zone-tweet {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  // width: 100%;
+  // display: flex;
+  width: 598px;
 
   padding-left: 1rem;
   padding-top: 8px;
@@ -101,8 +106,9 @@ export default {
       justify-content: space-between;
       align-items: center;
       margin-bottom: 22px;
-      /* .left-icon {
-      } */
+      .left-icon {
+        display: flex;
+      }
 
       .right-icon {
         display: flex;
@@ -145,6 +151,18 @@ export default {
         }
       }
     }
+  }
+}
+
+@media (max-width: 758px) {
+  #zone-tweet {
+    width: 100%;
+  }
+}
+
+@media (max-width: 476px) {
+  #zone-tweet {
+    display: none;
   }
 }
 </style>
