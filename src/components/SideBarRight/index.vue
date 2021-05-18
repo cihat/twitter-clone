@@ -1,25 +1,25 @@
 <script>
-import WhoFollow from "./WhoFollow.vue";
-import SearchTrend from "./SearchTrend";
+import WhoFollow from '@/components/SideBarRight/SideBarRightWhoFollow.vue'
+import SearchTrend from '@/components/SideBarRight/SideBarRightTrend'
 
 export default {
-  name: "SideBarRight",
+  name: 'SideBarRight',
   data() {
     return {
-      display: true,
-    };
+      display: true
+    }
   },
   components: {
     SearchTrend,
-    WhoFollow,
-  },
-};
+    WhoFollow
+  }
+}
 </script>
 
 <template>
   <div id="sidebar-right" class="dneme">
-    <SearchTrend id="search-trend" />
-    <WhoFollow id="who-follow" />
+    <search-trend id="search-trend" />
+    <who-follow id="who-follow" />
   </div>
 </template>
 

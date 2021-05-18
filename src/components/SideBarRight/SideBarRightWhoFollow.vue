@@ -1,39 +1,39 @@
 <script>
-const axios = require("axios");
+const axios = require('axios')
 
 export default {
-  name: "WhoFollow",
+  name: 'WhoFollow',
   data() {
     return {
       userData: {
         firstName: null,
         lastName: null,
         pictureUrl: null,
-        userId: null,
-      },
-    };
+        userId: null
+      }
+    }
   },
   created() {
     axios
-      .get("https://randomuser.me/api/")
+      .get('https://randomuser.me/api/')
       .then((response) => {
         // handle success
-        const value = [...response.data.results][0];
+        const value = [...response.data.results][0]
         // console.log(value);
-        this.userData.firstName = value.name.first;
-        this.userData.lastName = value.name.last;
-        this.userData.pictureUrl = value.picture.medium;
-        this.userData.userId = value.id.name;
+        this.userData.firstName = value.name.first
+        this.userData.lastName = value.name.last
+        this.userData.pictureUrl = value.picture.medium
+        this.userData.userId = value.id.name
       })
       .catch((error) => {
         // handle error
-        console.log(error);
+        console.log(error)
       })
       .then(() => {
         // console.log(this.userData);
-      });
-  },
-};
+      })
+  }
+}
 </script>
 
 <template>
@@ -44,7 +44,7 @@ export default {
         <img :src="userData.pictureUrl" alt="" />
         <div class="name">
           <h3 class="name">
-            {{ userData.firstName + " " + userData.lastName }}
+            {{ userData.firstName + ' ' + userData.lastName }}
           </h3>
           <h4 class="username" v-show="userData.userId">
             @{{ userData.userId }}
@@ -72,7 +72,7 @@ export default {
         <img :src="userData.pictureUrl" alt="" />
         <div class="name">
           <h3 class="name">
-            {{ userData.firstName + " " + userData.lastName }}
+            {{ userData.firstName + ' ' + userData.lastName }}
           </h3>
           <h4 class="username" v-show="userData.userId">
             @{{ userData.userId }}
@@ -88,7 +88,7 @@ export default {
 #who-follow {
   position: sticky;
   top: 1rem;
-  max-width: 350px;
+  width: 350px;
   margin-top: 0.2rem;
   margin-bottom: 24px;
   margin-left: 25px;

@@ -241,4 +241,11 @@ export default {
     }
   }
 }
+
+@media (max-width: 476px) {
+  #tweet {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
 </style>
