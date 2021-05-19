@@ -123,6 +123,11 @@ export default {
   padding: 1rem 31px 11px;
   cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
   img {
     margin-right: 1rem;
     border-radius: 50%;
