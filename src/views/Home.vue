@@ -1,6 +1,6 @@
 <script>
-import ZoneTweet from "../components/ZoneTweet";
-import Tweet from "../components/Tweet";
+import ZoneTweet from "@/components/ZoneTweet";
+import Tweet from "@/components/Tweet";
 
 export default {
   name: "Home",
@@ -15,12 +15,13 @@ export default {
   <div id="home-page" class="home">
     <div class="title">
       <h3>Home</h3>
-      <img src="../assets/img/starsicon.png" alt="" class="icon" />
+      <img src="@/assets/img/starsicon.png" alt="" class="icon" />
     </div>
     <ZoneTweet />
     <Tweet />
     <Tweet />
     <Tweet />
+    <!-- <Tweet />
     <Tweet />
     <Tweet />
     <Tweet />
@@ -41,14 +42,13 @@ export default {
     <Tweet />
     <Tweet />
     <Tweet />
-    <Tweet />
-    <Tweet />
+    <Tweet /> -->
   </div>
 </template>
 
 <style scoped lang="scss">
 .home {
-  max-width: 598px;
+  // max-width: 600px;
   // min-width: 598px;
   border: 1px solid rgba(0, 0, 0, 0.08);
 

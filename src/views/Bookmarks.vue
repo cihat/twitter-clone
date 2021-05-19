@@ -9,7 +9,7 @@ export default {};
 
 <style scoped lang="scss">
 .bookmarks {
-  width: 598px;
+  width: 600px;
   margin-top: 1rem;
 }
 </style>

@@ -10,7 +10,7 @@ export default {};
 
 <style scoped lang="scss">
 .more {
-  min-width: 598px;
+  width: 600px;
   margin-top: 1rem;
 }
 </style>
