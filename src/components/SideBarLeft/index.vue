@@ -1,5 +1,5 @@
 <script>
-import Lists from '@/components//SideBarLeft/SideBarLeftLists'
+import Lists from '@/components/SideBarLeft/SideBarLeftLists'
 import Icons from '@/components/Icons'
 
 export default {
