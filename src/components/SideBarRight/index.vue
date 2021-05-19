@@ -1,6 +1,7 @@
 <script>
 import WhoFollow from '@/components/SideBarRight/SideBarRightWhoFollow.vue'
 import SearchTrend from '@/components/SideBarRight/SideBarRightTrend'
+import SideBarRightFooter from '@/components/SideBarRight/SideBarRightFooter'
 
 export default {
   name: 'SideBarRight',
@@ -11,7 +12,8 @@ export default {
   },
   components: {
     SearchTrend,
-    WhoFollow
+    WhoFollow,
+    SideBarRightFooter
   }
 }
 </script>
@@ -20,6 +22,7 @@ export default {
   <div id="sidebar-right" class="dneme">
     <search-trend id="search-trend" />
     <who-follow id="who-follow" />
+    <side-bar-right-footer/>
   </div>
 </template>
 
@@ -34,7 +37,6 @@ export default {
     #sidebar-right {
       width: 0px;
       display: none !important;
-      background-color: red;
     }
     #search-trend {
       display: none !important;

@@ -180,6 +180,8 @@ export default {
       padding: 16px;
       text-align: left;
       font-weight: 300;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
 
       &:hover {
         background-color: rgba(0, 0, 0, 0.03);

@@ -88,17 +88,21 @@ ul {
   top: 15px;
 
   li {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    &:nth-last-child(2) {
+      margin-bottom: 8px;
+    }
     a {
       transition: background-color 0.1s;
+      padding: 12px;
+      box-sizing: content-box;
+      border-radius: 9999px;
       display: inline-flex;
       align-items: center;
-      padding-left: 12px;
-      padding-right: 12px;
-      padding-top: 6px;
-      padding-bottom: 6px;
       border-radius: 100px;
+
+      &:hover {
+        background-color: rgba(#1da1f2, 0.1);
+      }
       svg {
         transition: fill 0.1s;
         width: 26px;
@@ -110,11 +114,9 @@ ul {
         font-size: 20px;
         line-height: 22.27px;
         color: #333333;
-        padding: 0.5rem;
       }
     }
     a:hover {
-      background-color: rgba(#1da1f2, 0.2);
       svg {
         fill: #1da1f2;
       }

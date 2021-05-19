@@ -81,6 +81,7 @@ export default {
       </div>
       <button>Follow</button>
     </div>
+    <h4 class="show-more">Show more</h4>
   </div>
 </template>
 
@@ -95,8 +96,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 14px;
-  padding-left: 19px;
   background: #f6f8fa;
   border-radius: 12px;
 
@@ -105,17 +104,20 @@ export default {
     font-size: 19px;
     line-height: 22.27px;
     color: #000;
-    margin-bottom: 1rem;
+    padding: 12px 16px;
   }
 
   .people {
+    padding: 12px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
     cursor: pointer;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
 
     .container {
       display: flex;
@@ -171,6 +173,25 @@ export default {
     }
     button:focus {
       outline: 0;
+    }
+  }
+
+  h4.show-more {
+    color: #1da1f2;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16.41px;
+    cursor: pointer;
+    padding: 16px;
+    text-align: left;
+    font-weight: 300;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.03);
     }
   }
 }
