@@ -59,12 +59,14 @@ export default {
     },
 
     setRandomValue() {
-      let number = Math.floor(Math.random() * 100)
-      let number2 = Math.floor(Math.random() * 56)
-      this.reTweetNumber = Math.floor(number + (number2 / 4) ** 2)
-      this.likeNumber = Math.floor(number + (number2 / 6) ** 2)
+      let comment = Math.floor(Math.random() * 50) + 1
+      let reTweet = Math.floor(comment * 4.3)
+      let like = Math.floor(reTweet * 15.7)
+
+      this.reTweetNumber = reTweet
+      this.likeNumber = like
+      this.replyNumber = comment
       this.date = Math.floor(Math.random() * 24) + 1
-      this.replyNumber = number
     }
   },
   async created() {
@@ -175,33 +177,45 @@ export default {
       justify-content: space-around;
       width: 100%;
       #reply:hover {
-        fill: rgba(#1da1f2, 0.8);
-        background-color: rgba(#1da1f2, 0.08);
-        border-radius: 100px;
+        svg {
+          fill: rgba(#1da1f2, 0.8);
+          background-color: rgba(#1da1f2, 0.08);
+          border-radius: 100px;
+        }
+
         span {
           color: rgba(#1da1f2, 0.8);
         }
       }
       #retweet:hover {
-        fill: rgba(green, 0.8);
-        background-color: rgba(green, 0.08);
-        border-radius: 100px;
+        svg {
+          fill: rgba(green, 0.8);
+          background-color: rgba(green, 0.08);
+          border-radius: 100px;
+        }
+
         span {
           color: rgba(green, 0.8);
         }
       }
       #like:hover {
-        fill: rgba(red, 0.8);
-        background-color: rgba(red, 0.08);
-        border-radius: 100px;
+        svg {
+          fill: rgba(red, 0.8);
+          background-color: rgba(red, 0.08);
+          border-radius: 100px;
+        }
+
         span {
           color: rgba(red, 0.8);
         }
       }
       #share:hover {
-        fill: rgba(green, 0.8);
-        background-color: rgba(green, 0.08);
-        border-radius: 50%;
+        svg {
+          fill: rgba(#1da1f2, 0.8);
+          background-color: rgba(#1da1f2, 0.08);
+          border-radius: 50%;
+        }
+
         span {
           color: rgba(green, 0.8);
         }
@@ -211,9 +225,10 @@ export default {
         justify-content: center;
         align-items: center;
         svg {
+          box-sizing: content-box;
           cursor: pointer;
-          width: 24.75px;
-          padding: 5px;
+          width: 18px;
+          padding: 0.5rem;
           margin-right: 4px;
         }
         span {

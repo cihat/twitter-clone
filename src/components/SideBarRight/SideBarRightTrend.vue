@@ -133,8 +133,10 @@ export default {
 
       .section {
         border-radius: 50%;
+        box-sizing: content-box;
+        padding: .5rem;
         &:hover {
-          background-color: rgba(#1da1f2, 0.2);
+          background-color: rgba(#1da1f2, 0.1);
           fill: #1da1f2;
         }
       }
@@ -149,6 +151,7 @@ export default {
         .rank {
           line-height: 14px;
           font-size: 12px;
+          font-weight: 400;
           color: rgb(91, 112, 131);
         }
         .caption {
