@@ -13,14 +13,18 @@ export default {
       <router-link to="/home" tag="a">
         <icons icon="home-fill" v-if="$route.name === 'Home'" />
         <icons icon="home" v-else />
-        <h4>Home</h4>
+        <h4 :class="{ active: $route.name === 'Home' }">
+          Home
+        </h4>
       </router-link>
     </li>
     <li>
       <router-link to="/explore" tag="a">
         <icons icon="explore-fill" v-if="$route.name === 'Explore'" />
         <icons icon="explore" v-else />
-        <h4>Explore</h4>
+        <h4 :class="{ active: $route.name === 'Explore' }">
+          Explore
+        </h4>
       </router-link>
     </li>
     <li>
@@ -31,45 +35,54 @@ export default {
         />
         <icons icon="notifications" v-else />
 
-        <h4>Notifications</h4>
+        <h4 :class="{ active: $route.name === 'Notifications' }">
+          Notifications
+        </h4>
       </router-link>
     </li>
     <li>
       <router-link to="/messages" tag="a">
         <icons icon="messages-fill" v-if="$route.name === 'Messages'" />
         <icons icon="messages" v-else />
-
-        <h4>Messages</h4>
+        <h4 :class="{ active: $route.name === 'Messages' }">
+          Messages
+        </h4>
       </router-link>
     </li>
     <li class="bookmarks">
       <router-link to="/bookmarks" tag="a">
         <icons icon="bookmarks-fill" v-if="$route.name === 'Bookmarks'" />
         <icons icon="bookmarks" v-else />
-
-        <h4>Bookmarks</h4>
+        <h4 :class="{ active: $route.name === 'Bookmarks' }">
+          Bookmarks
+        </h4>
       </router-link>
     </li>
     <li class="lists">
       <router-link to="/lists" tag="a">
         <icons icon="lists-fill" v-if="$route.name === 'Lists'" />
         <icons icon="lists" v-else />
-
-        <h4>Lists</h4>
+        <h4 :class="{ active: $route.name === 'Lists' }">
+          Lists
+        </h4>
       </router-link>
     </li>
     <li>
       <router-link to="/profile" tag="a">
         <icons icon="profile-fill" v-if="$route.name === 'Profile'" />
         <icons icon="profile" v-else />
-
-        <h4>Profile</h4>
+        <h4 :class="{ active: $route.name === 'Profile' }">
+          Profile
+        </h4>
       </router-link>
     </li>
     <li>
       <router-link to="/More" tag="a">
-        <icons icon="more" />
-        <h4>More</h4>
+        <icons icon="more-fill" v-if="$route.name === 'More'" />
+        <icons icon="more" v-else />
+        <h4 :class="{ active: $route.name === 'More' }">
+          More
+        </h4>
       </router-link>
     </li>
     <li>
@@ -162,6 +175,10 @@ ul {
       display: none;
     }
   }
+}
+
+.active {
+  color: #1da1f2;
 }
 
 @media (max-width: 1264px) {
