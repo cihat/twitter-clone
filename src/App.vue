@@ -1,36 +1,31 @@
 <script>
-import SideBarLeft from "./components/SideBarLeft";
-import SideBarRight from "./components/SideBarRight";
+import SideBarLeft from './components/SideBarLeft'
+import SideBarRight from './components/SideBarRight'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     SideBarLeft,
-    SideBarRight,
+    SideBarRight
   },
   data() {
-    return {
-      isVideoMode: false,
-    };
-  },
-
-};
+    return {}
+  }
+}
 </script>
 
 <template>
   <div id="app">
     <SideBarLeft />
-    <router-view id="router-view"/>
+    <router-view id="router-view" />
     <SideBarRight />
   </div>
 </template>
 
 <style lang="scss">
-@import "./assets/css/reset.css";
-@import "./assets/scss/responsive.scss";
-@import "./assets/scss/global-variables.scss";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
-@import './assets/theme/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import './assets/scss/main.scss';
+@import './assets/css/reset.css';
 
 body {
   background-color: $color-bg;
@@ -48,7 +43,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 #router-view {
   flex: auto;
