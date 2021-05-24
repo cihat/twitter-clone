@@ -22,7 +22,7 @@ export default {
   <div id="sidebar-right" class="dneme">
     <search-trend id="search-trend" />
     <who-follow id="who-follow" />
-    <side-bar-right-footer/>
+    <side-bar-right-footer id="footer" />
   </div>
 </template>
 
@@ -43,6 +43,11 @@ export default {
       width: 0px;
     }
     #who-follow {
+      display: none !important;
+      width: 0px;
+    }
+
+    #footer {
       display: none !important;
       width: 0px;
     }
