@@ -30,7 +30,7 @@ export default {
 #sidebar-right {
   display: block;
   max-width: 350px;
-  @media (max-width: 758px) {
+  @media (max-width: 1176px) {
     html {
       font-size: 12px;
     }
