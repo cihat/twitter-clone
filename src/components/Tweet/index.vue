@@ -28,12 +28,12 @@ export default {
   },
   methods: {
     addLike() {
-      this.likeNumber += 1
+      this.likeNumber >= 0 ? (this.likeNumber += 1) : (this.likeNumber = 0)
     },
     async randomUser() {
       await axios
         .get('https://randomuser.me/api/')
-        .then((response) => {
+        .then(response => {
           // handle success
           const value = [...response.data.results][0]
           // console.log(value);
@@ -42,7 +42,7 @@ export default {
           this.userData.pictureUrl = value.picture.medium
           this.userData.userId = value.id.name
         })
-        .catch((error) => {
+        .catch(error => {
           // handle error
           console.log(error)
         })
@@ -51,7 +51,7 @@ export default {
         })
     },
     async getQuote() {
-      await axios.get('https://api.quotable.io/random/').then((response) => {
+      await axios.get('https://api.quotable.io/random/').then(response => {
         const data = response.data
         this.tweetBody.content = data.content
         this.tweetBody.author = data.author
@@ -107,7 +107,7 @@ export default {
           <icons icon="retweet" />
           <span v-show="reTweetNumber">{{ reTweetNumber }}</span>
         </div>
-        <div class="button" id="like">
+        <div @click="addLike()" class="button" id="like">
           <icons icon="like" />
           <span v-show="likeNumber">{{ likeNumber }}</span>
         </div>
